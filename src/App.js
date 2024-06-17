@@ -1,14 +1,13 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import Navbar from "./Component/Navbar";
-import Footer from "./Component/footer";
-import Home from "./Page/Home/Home";
-
+import Navbar from "./Component/Navbar.js";
+import Footer from "./Component/footer.js";
+import AllRoute from "./Component/route.jsx";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <AllRoute />
       <Footer />
     </div>
   );

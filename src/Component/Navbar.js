@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  CircularProgress,
-  CircularProgressLabel,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Image, Input } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";

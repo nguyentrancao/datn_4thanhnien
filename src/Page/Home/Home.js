@@ -2,14 +2,13 @@ import React from "react";
 import BannerHome from "../BannerHome/BannerHome.js";
 import { Box, Center } from "@chakra-ui/react";
 import ProductTop from "../Product/ProductTop";
-import { px } from "framer-motion";
 import ProductList from "../Product/ProductList";
 import ProductNb from "../Product/ProductNoibat.js";
 import Smartwach from "../Product/Smartwach.js";
-import Phukiennb from "../Product/Phukien.js"
-import ProductCard from"../Product/Gtiphone.js"
-import InfoCard from"../Product/Service.js"
-import CustomComponent from"../Product/Blog.js"
+import Phukiennb from "../Product/Phukien.js";
+import ProductCard from "../Product/Gtiphone.js";
+import InfoCard from "../Product/Service.js";
+import CustomComponent from "../Product/Blog.js";
 const Home = () => {
   return (
     <>
@@ -30,7 +29,7 @@ const Home = () => {
       <ProductCard />
       <InfoCard />
       <InfoCard />
-      <CustomComponent/>
+      <CustomComponent />
     </>
   );
 };
