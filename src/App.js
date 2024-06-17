@@ -1,15 +1,22 @@
 import React from "react";
-import "./App.css";
-import Navbar from "./Component/Navbar.js";
-import Footer from "./Component/footer.js";
-import AllRoute from "./Component/route.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Component/Navbar";
+import Footer from "./Component/Footer";
+import BannerHome from "./Page/BannerHome/BannerHome";
+import route from "./Routes";
+
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      <AllRoute />
+      <Routes>
+        {route.map((route, index) => (
+          <Route key={index} path={route.path} element={<route.component />} />
+        ))}
+      </Routes>
+      <BannerHome />
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
