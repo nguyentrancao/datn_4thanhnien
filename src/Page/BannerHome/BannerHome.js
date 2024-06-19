@@ -5,6 +5,7 @@ const BannerHome = () => {
     <>
       <Center>
         <Grid
+          mt={110}
           w={"100%"}
           h="500px"
           templateRows="repeat(3, 1fr)"

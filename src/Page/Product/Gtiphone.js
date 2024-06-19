@@ -39,7 +39,7 @@ const ProductCard = () => {
   // };
 
   return (
-    <Box width="1318px" mx="auto" mt={10}>
+    <Box width="80%" mx="auto" mt={10}>
       <Grid
         ml={12}
         mt={50}

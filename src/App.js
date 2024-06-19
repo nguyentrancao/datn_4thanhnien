@@ -1,22 +1,34 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
-import Footer from "./Component/Footer";
+import Footer from "./Component/footer";
 import BannerHome from "./Page/BannerHome/BannerHome";
-import route from "./Routes";
+import routes from "./Routes";
+import Home from "./Page/Home/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        {route.map((route, index) => (
+        {routes.map((route, index) => (
           <Route key={index} path={route.path} element={<route.component />} />
         ))}
       </Routes>
-      <BannerHome />
+    
+      {/* <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={<route.component />} />
+        ))}
+      </Routes> */}
       <Footer />
     </BrowserRouter>
+    // <>
+    //    <Navbar/>
+    //    <Home/>
+       
+    // </>
+ 
   );
 }
 

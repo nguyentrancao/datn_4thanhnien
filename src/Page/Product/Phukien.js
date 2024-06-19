@@ -1,5 +1,6 @@
 import { Box, Center, Grid, GridItem, Text, Flex, Button } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
+import { Popover,PopoverBody } from "@chakra-ui/react";
 
 const Phukiennb = () => {
     const products = [
@@ -56,8 +57,8 @@ const Phukiennb = () => {
     ];
 
     return (
-        <Box width="1318px" mx="auto" mt={-3300}>
-            <Text fontSize={40} as='b' textAlign="center">CÁC PHỤ KIỆN KHÁC</Text>
+        <Box width="100%" mx="auto" mt={50}>
+            <Text fontSize={40} as='b' textAlign="center">Các phụ kiện khác</Text>
             <Flex justifyContent="space-between" px={100} mt={10}>
                 <Text fontSize={20}>Pin dự phòng</Text>
                 <Text fontSize={20}>Cáp sạc</Text>
@@ -80,6 +81,7 @@ const Phukiennb = () => {
                 gap={10}
                 justifyContent="center"
                 alignItems="center"
+                
             >
                 {products.map((product, index) => (
                     <GridItem
@@ -90,27 +92,48 @@ const Phukiennb = () => {
                         borderRadius={8}
                         boxShadow="lg"
                         p={4}
+                        border="1px solid black"
+                        mt={20}
                     >
                         <Center>
                             <Image
                                 src={product.image}
                                 alt={`Product ${index + 1}`}
-                                h="150px"
+                                h="180px"
                                 w="150px"
                                 mt={10}
                                 borderRadius={8}
                                 marginBottom={20}
                             />
                         </Center>
+                        <Box textAlign="center"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              mt={20}>
                         <Text fontSize='2xl' as='b' textAlign="center">{product.name}</Text>
                         <Text fontSize='md' textAlign="center" mt={4}>
                             Giá mới: <span style={{ fontSize: '20px', color: 'red' }}>{product.price}</span>
                         </Text>
+                        </Box>
                     </GridItem>
                 ))}
             </Grid>
             <Center mt={50}>
-                <Button fontSize={20} borderRadius={8} bg="#fff" h={50} border="1px solid black">Xem Thêm</Button>
+            <Popover>
+        <PopoverBody>
+        <Button
+          fontSize={20}
+          borderRadius={8}
+          bg="#fff"
+          h={50}
+          border="1px solid black"
+           _hover={{ fontSize: "21px", color: "red", transition: "0.2s" }}
+        >
+          Xem Thêm
+        </Button>
+        </PopoverBody>
+        </Popover>
             </Center>
             
         </Box>

@@ -36,7 +36,7 @@ const ParentComponent = () => {
 
 const styles = {
   wrapper: {
-    width: '1348px',
+    width: '100%',
     margin: '0 auto', // Center the parent container horizontally
   },
   title: {

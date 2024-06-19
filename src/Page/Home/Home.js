@@ -12,24 +12,29 @@ import CustomComponent from "../Product/Blog.js";
 const Home = () => {
   return (
     <>
+    <Center>
+      <Box w={'100%'}> 
       <Center>
-        <Box mt={50} w={"80%"} mbt>
+        <Box mt={10} w={"80%"} >
           <BannerHome />
         </Box>
       </Center>
       <Center>
-        <Box mt={10} w={"80%"} mbt>
-          <ProductTop h={200}></ProductTop>
-          <ProductList h={50} mt={300}></ProductList>
+        <Box mt={10} w={"80%"} >
+          <ProductTop ></ProductTop>
+          <ProductList />
+          <ProductNb></ProductNb>
+          <Smartwach />
+          <Phukiennb />
         </Box>
       </Center>
-      <ProductNb></ProductNb>
-      <Smartwach />
-      <Phukiennb />
-      <ProductCard />
+      {/* <ProductCard />
       <InfoCard />
       <InfoCard />
-      <CustomComponent />
+      <CustomComponent /> */}
+      </Box>
+      </Center>
+
     </>
   );
 };

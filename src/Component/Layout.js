@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer";
+import Footer from "./foote";
 import Navbar from "./Navbar";
 
 function Layout({ children }) {
