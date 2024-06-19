@@ -109,6 +109,7 @@ const Navbar = () => {
                     </Box>
 
                     <Box ml={10}>
+                    <Link to="/cart" style={{ textDecoration: "none" }}>
                       <Flex>
                         <Icon
                           as={BsCart2}
@@ -126,6 +127,7 @@ const Navbar = () => {
                           Giỏ hàng
                         </Heading>
                       </Flex>
+                      </Link>
                     </Box>
                   </Flex>
                 </Box>

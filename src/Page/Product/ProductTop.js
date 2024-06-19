@@ -52,19 +52,20 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
-                            
+                            </Box>
                         </GridItem>
 
                         <GridItem
@@ -91,18 +92,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
+                         
                         </GridItem>
 
                         <GridItem
@@ -129,18 +133,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
+                        
                         </GridItem>
 
                         <GridItem
@@ -167,18 +174,20 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
                         </GridItem>
 
                         <GridItem
@@ -205,18 +214,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
+                          
                         </GridItem>
 
                         <GridItem
@@ -241,18 +253,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
                         </GridItem>
                         <GridItem
                             mr={2}
@@ -278,18 +293,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
                         </GridItem>
                         <GridItem
                             mr={2}
@@ -315,18 +333,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
+                          
                         </GridItem>
                         <GridItem
                             mr={2}
@@ -352,18 +373,21 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
+                           
                         </GridItem>
                         <GridItem
                             mr={2}
@@ -389,18 +413,20 @@ const ProductTop = () => {
                             <Flex >
                             <Text fontSize='2xl' as='b' ml={30} mt={20}>HP Gaming VICTUS 16 r0128TX i5 13450HX</Text>
                             </Flex>
-                            <Flex fontSize='md' mt={50} ml={20}>
-                               <Box mb={10}>Giá mới: </Box>
+                            <Box mt={20} ml={30}> 
+                            <Flex fontSize='md'>
+                               <Box >Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex >
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex >
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
+                            </Box>
                         </GridItem>
                     </Grid>
                 {/* </Grid> */}
