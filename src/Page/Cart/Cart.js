@@ -65,6 +65,7 @@ const Cart = () => {
       border="1px solid #ccc"
       borderRadius="md"
       bg="gray.100"
+      mt="150"
     >
       <Heading mb={6} color="gray.800">
         Your Cart
