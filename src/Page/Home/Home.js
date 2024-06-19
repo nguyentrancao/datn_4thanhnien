@@ -28,10 +28,9 @@ const Home = () => {
           <Phukiennb />
         </Box>
       </Center>
-      {/* <ProductCard />
+      <ProductCard />
       <InfoCard />
-      <InfoCard />
-      <CustomComponent /> */}
+      <CustomComponent />
       </Box>
       </Center>
 

@@ -59,7 +59,7 @@ const Smartwatch = () => {
                         // mx="auto"
                     >
                         <GridItem
-                            h="550px"
+                            h="650px"
                             w="100%"
                             rowSpan={2}
                             colSpan={1}
@@ -70,8 +70,8 @@ const Smartwatch = () => {
                                 <Image
                                     src="https://isotech-demo.myshopify.com/cdn/shop/files/Watch_Banner_7b3ae013-75a3-479c-a76f-7c2eea9d4a9e_1500x.png?v=1696738786"
                                     alt="Banner"
-                                    h="650px"
-                                    w="300px"
+                                    h="700px"
+                                    w="400px"
                                     borderRadius={8}
                                     marginBottom={20}
                                     
@@ -81,8 +81,8 @@ const Smartwatch = () => {
                         {products.map((product, index) => (
                             <GridItem
                                 key={index}
-                                h="300px"
-                                w="200px"
+                                h="350px"
+                                w="235px"
                                 bg="whiite"
                                 borderRadius={8}
                                 boxShadow="lg"

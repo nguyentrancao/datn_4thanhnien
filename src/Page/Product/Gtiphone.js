@@ -60,7 +60,7 @@ const ProductCard = () => {
         {products.map((product, index) => (
           <GridItem
             key={index}
-            h="360px"
+            h="380px"
             w="227px"
             bg="white"
             borderRadius={8}

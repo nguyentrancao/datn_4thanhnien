@@ -95,6 +95,7 @@ const Navbar = () => {
                     </Box>
 
                     <Box ml={10}>
+<<<<<<< HEAD
                       <Link to="/cart" style={{ textDecoration: "none" }}>
                         <Flex>
                           <Icon
@@ -113,6 +114,26 @@ const Navbar = () => {
                             Giỏ hàng
                           </Heading>
                         </Flex>
+=======
+                    <Link to="/cart" style={{ textDecoration: "none" }}>
+                      <Flex>
+                        <Icon
+                          as={BsCart2}
+                          fontSize={"25px"}
+                          color={"#555"}
+                          margin={2}
+                        />
+                        <Heading
+                          fontWeight={400}
+                          m="2"
+                          cursor={"pointer"}
+                          fontSize={"18px"}
+                          color="#555"
+                        >
+                          Giỏ hàng
+                        </Heading>
+                      </Flex>
+>>>>>>> f8c206415d833069d6e860915addbcedfdd70fd4
                       </Link>
                     </Box>
                   </Flex>
