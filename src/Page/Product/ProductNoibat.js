@@ -79,7 +79,7 @@ const ProductNoibat = () => {
         w="100%"
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
-        gap={4}
+        gap={10}
         justifyContent="center"
         alignItems="center"
         
@@ -87,8 +87,8 @@ const ProductNoibat = () => {
         {productData.map((product, index) => (
           <GridItem
             key={index}
-            h="290px"
-            w="230px"
+            h="320px"
+            w="260px"
             bg="white"
             borderRadius={8}
             boxShadow="lg"

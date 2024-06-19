@@ -56,11 +56,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -95,11 +95,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -133,11 +133,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -171,11 +171,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -209,11 +209,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -245,11 +245,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -282,11 +282,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -319,11 +319,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -356,11 +356,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>
@@ -393,11 +393,11 @@ const ProductTop = () => {
                                <Box mb={10}>Giá mới: </Box>
                                <Box style={{ fontSize: '18px', color: 'red',marginLeft:'5px' }}>50000000</Box>
                             </Flex>
-                            <Flex ml={20} mt={-25}>
+                            <Flex ml={20} mt={25}>
                                <Text >Giá gốc: </Text>
                                <Text style={{ fontSize: '18px',marginLeft:'5px' }}  textDecoration="line-through"> 50000000</Text>
                             </Flex>
-                            <Flex ml={20}mt={-35}>
+                            <Flex ml={20}mt={-50}>
                                <Text>Giảm giá:</Text>
                                <Text bg="yellow" ml={5}>-15%</Text>
                             </Flex>

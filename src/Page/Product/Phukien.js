@@ -58,7 +58,7 @@ const Phukiennb = () => {
 
     return (
         <Box width="100%" mx="auto" mt={50}>
-            <Text fontSize={40} as='b' textAlign="center">Các phụ kiện khác</Text>
+            <Text fontSize={32} as='b' textAlign="center" ml={520}>Các phụ kiện khác</Text>
             <Flex justifyContent="space-between" px={100} mt={10}>
                 <Text fontSize={20}>Pin dự phòng</Text>
                 <Text fontSize={20}>Cáp sạc</Text>
@@ -78,7 +78,7 @@ const Phukiennb = () => {
                 w="100%"
                 templateRows="repeat(2, 1fr)"
                 templateColumns="repeat(5, 1fr)"
-                gap={10}
+                
                 justifyContent="center"
                 alignItems="center"
                 
@@ -87,13 +87,13 @@ const Phukiennb = () => {
                     <GridItem
                         key={index}
                         h="350px"
-                        w="250px"
+                        w="260px"
                         bg="white"
                         borderRadius={8}
                         boxShadow="lg"
-                        p={4}
+                        p={10}
                         border="1px solid black"
-                        mt={20}
+                        mt={10}
                     >
                         <Center>
                             <Image
