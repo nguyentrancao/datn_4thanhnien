@@ -37,7 +37,9 @@ const ParentComponent = () => {
 const styles = {
   wrapper: {
     width: '100%',
+    maxWidth: '1348px', // Set the maximum width to 1348px
     margin: '0 auto', // Center the parent container horizontally
+    padding: '0 10px', // Add padding to the sides for better spacing
   },
   title: {
     textAlign: 'left', // Align the title to the left
@@ -48,35 +50,31 @@ const styles = {
   },
   parentContainer: {
     display: 'flex',
+    flexWrap: 'wrap', // Allow items to wrap to the next line
     justifyContent: 'space-between',
     gap: '10px', // Add gap between components
-    marginTop: '50px', // Add margin-top to create space between the title and the components
   },
   container: {
     width: 'calc((100% - 20px) / 3)', // Calculate width to fit three items within 1348px with a 10px gap
-    paddingTop: 7.99,
-    paddingBottom: 24.99,
-    paddingLeft: 7.99,
-    paddingRight: 7.99,
+    padding: '8px 8px 25px 8px',
     background: 'white',
-    borderRadius: 15,
+    borderRadius: '15px',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    gap: 19,
-    display: 'inline-flex',
+    gap: '19px',
+    display: 'flex',
   },
   image: {
     width: '100%',
     height: '250px',
-    position: 'relative',
-    borderRadius: 15,
+    borderRadius: '15px',
+    objectFit: 'cover', // Ensure the image covers the area
   },
   text: {
     width: '100%',
-    height: '27px',
     color: 'black',
-    fontSize: '15.30px',
+    fontSize: '15.3px',
     fontFamily: 'Inter',
     fontWeight: '500',
     lineHeight: '27px',

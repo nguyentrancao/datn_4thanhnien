@@ -74,7 +74,7 @@ const InfoCardRow = () => {
   ];
 
   return (
-    <Box textAlign="center">
+    <Box textAlign="center" w={"100%"}>
       <Text mt={-280} fontSize="36px" fontWeight="bold" mb={10}>
         Dịch vụ của chúng tôi
       </Text>
