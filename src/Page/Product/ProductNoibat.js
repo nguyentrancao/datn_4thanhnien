@@ -57,11 +57,11 @@ const ProductNoibat = () => {
   ];
 
   return (
-    <Box width="100%" mx="auto" mt={20}>
-      <Text fontSize={40} as="b" textAlign="center">
+    <Box width="100%" mx="auto" mt={40}>
+      <Text fontSize={40} as="b" textAlign="center" mt={30}>
         Sản phẩm nổi bật
       </Text>
-      <Flex justifyContent="space-between" px={100} mt={5}>
+      <Flex justifyContent="space-between" px={100} mt={20}>
         <Text fontSize={20}>Điện thoại</Text>
         <Text fontSize={20}>Máy tính</Text>
         <Text fontSize={20}>Đồng hồ</Text>
@@ -74,8 +74,8 @@ const ProductNoibat = () => {
         </Box>
       </Flex>
       <Grid
-        ml={12}
-        mt={30}
+        ml={1}
+        mt={40}
         w="100%"
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
@@ -88,7 +88,7 @@ const ProductNoibat = () => {
           <GridItem
             key={index}
             h="320px"
-            w="260px"
+            w="230px"
             bg="white"
             borderRadius={8}
             boxShadow="lg"

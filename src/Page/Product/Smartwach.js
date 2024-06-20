@@ -38,11 +38,11 @@ const Smartwatch = () => {
     ];
 
     return (
-        <Box width="100%" mx="auto" mt={30}>
+        <Box width="100%" mx="auto" mt={40}>
             <Flex alignItems="center">
                 <Text fontSize={40} as='b' >Smartwatch Products</Text>
             </Flex>
-            <Flex width="100%"mt={10}>
+            <Flex width="100%"mt={50}>
                 <Grid
                     templateRows="repeat(1, 1fr)"
                     templateColumns="repeat(1, 1fr)"
@@ -54,9 +54,9 @@ const Smartwatch = () => {
                 >
                     <Grid
                         templateColumns="repeat(5, 1fr)"
-                        gap={6}
-                        w="100%"
-                        // mx="auto"
+                        gap={10}
+                        w="80%"
+                        
                     >
                         <GridItem
                             h="650px"
@@ -71,7 +71,7 @@ const Smartwatch = () => {
                                     src="https://isotech-demo.myshopify.com/cdn/shop/files/Watch_Banner_7b3ae013-75a3-479c-a76f-7c2eea9d4a9e_1500x.png?v=1696738786"
                                     alt="Banner"
                                     h="700px"
-                                    w="400px"
+                                    w="300px"
                                     borderRadius={8}
                                     marginBottom={20}
                                     
@@ -81,8 +81,8 @@ const Smartwatch = () => {
                         {products.map((product, index) => (
                             <GridItem
                                 key={index}
-                                h="350px"
-                                w="235px"
+                                h="345px"
+                                w="93%"
                                 bg="whiite"
                                 borderRadius={8}
                                 boxShadow="lg"
@@ -94,8 +94,8 @@ const Smartwatch = () => {
                                     <Image
                                         src={product.image}
                                         alt={`Product ${index + 1}`}
-                                        h="150px"
-                                        w="150px"
+                                        h="200px"
+                                        w="auto"
                                         mt={10}
                                         borderTopRadius={8}
                                         // marginBottom={20}
