@@ -60,12 +60,14 @@ const ProductCard = () => {
         {products.map((product, index) => (
           <GridItem
             key={index}
-            h="380px"
+            h="355px"
             w="227px"
             bg="white"
             borderRadius={8}
             boxShadow="lg"
             ml={20}
+            border="1px solid black"
+          
           >
             <Center>
               <Image
@@ -76,6 +78,7 @@ const ProductCard = () => {
                 mt={10}
                 borderRadius={8}
                 marginBottom={20}
+                mt={20}
               />
             </Center>
             <Text fontSize="2xl" as="b" textAlign="center">
