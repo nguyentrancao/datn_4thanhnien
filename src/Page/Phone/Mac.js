@@ -1,101 +1,211 @@
+import { Box, Button, Flex, Text, Image, Select } from "@chakra-ui/react";
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
-import { Center } from "@chakra-ui/react";
 
-const Auth = () => {
-  const [isActive, setIsActive] = useState(false);
+const MacProduct = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [clickedIndex, setClickedIndex] = useState(null);
 
-  const handleLoginClick = () => {
-    setIsActive(false);
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
   };
 
-  const handleRegisterClick = () => {
-    setIsActive(true);
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
+  const handleClick = (index) => {
+    if (clickedIndex === index) {
+      setClickedIndex(null); // Bấm lại để huỷ bỏ
+    } else {
+      setClickedIndex(index); // Bấm để đánh dấu đã chọn
+    }
   };
 
   return (
-    <Center>
-      <div className={`container ${isActive ? "active" : ""}`} id="container">
-        <div className="form-container sign-up">
-          <form>
-            <h1>Tạo tài khoản</h1>
-            <div className="social-icons">
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-google-plus-g"></i>
+    <div>
+      {/* Banner */}
+      <Flex justifyContent="center" alignItems="center">
+        <Box>
+          <Image
+            src="https://cdn.tgdd.vn/2023/09/banner/1200x150-tgdd-1200x150-1.png"
+            alt="Banner"
+            width="979px"
+            height="300px"
+            objectFit="cover"
+          />
+        </Box>
+      </Flex>
+
+      <br />
+
+      {/* Filter and Product Section */}
+      <Box width="80%" margin="auto">
+        <Flex justifyContent="space-between" alignItems="center">
+          {/* Buttons */}
+          <Flex gap="1rem">
+            <Button
+              borderRadius="5px"
+              colorScheme="teal"
+              variant="outline"
+              width="100px"
+              height="50px"
+              _hover={{ transform: "scale(1.05)" }}
+            >
+              16GB
+            </Button>
+            <Button
+              borderRadius="5px"
+              colorScheme="teal"
+              variant="outline"
+              width="100px"
+              height="50px"
+              _hover={{ transform: "scale(1.05)" }}
+            >
+              64GB
+            </Button>
+            <Button
+              borderRadius="5px"
+              colorScheme="teal"
+              variant="outline"
+              width="100px"
+              height="50px"
+              _hover={{ transform: "scale(1.05)" }}
+            >
+              128GB
+            </Button>
+            <Button
+              borderRadius="5px"
+              colorScheme="teal"
+              variant="outline"
+              width="100px"
+              height="50px"
+              _hover={{ transform: "scale(1.05)" }}
+            >
+              1TB
+            </Button>
+          </Flex>
+
+          {/* Select Dropdown */}
+          <Select
+            placeholder="Hiển thị tất cả sản phẩm"
+            width="250px"
+            height="50px"
+            borderColor="#e2e8f0"
+            borderRight="6px"
+            color="#1a202c"
+            fontSize="16px"
+            fontWeight="bold"
+          >
+            <option value="all">Tất cả sản phẩm</option>
+            <option value="low-high">Sản phẩm rẻ nhất</option>
+            <option value="high-low">Sản phẩm đắt nhất</option>
+            <option value="discount">Sản phẩm giảm giá</option>
+          </Select>
+        </Flex>
+
+        <br />
+
+        {/* Products */}
+        <Flex flexWrap="wrap" justifyContent="flex-start">
+          {Array.from({ length: 12 }).map((_, index) => (
+            <Box
+              key={index}
+              borderWidth="1px"
+              border="1px solid #cccccc"
+              borderRadius="4px"
+              overflow="hidden"
+              flexBasis="calc(25% - 20px)"
+              margin="0 10px 20px 0"
+              padding="1rem"
+              boxShadow={
+                (hoveredIndex === index || clickedIndex === index) &&
+                "0 0 10px rgba(0, 0, 0, 0.2)"
+              }
+              transition="box-shadow 0.3s"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => handleClick(index)}
+              width="calc(25% - 20px)"
+              marginRight="20px"
+              marginBottom="20px"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center" // căn giữa theo chiều ngang
+            >
+              <Link to={`/product/${index}`}>
+                <Image
+                  src="https://bizweb.dktcdn.net/thumb/1024x1024/100/444/581/products/16-jpeg-d3d34343-fa06-4733-949e-jpeg-a29433a2-f2c8-4d26-a386-d6dbdfe88e8d.jpg?v=1673243952283"
+                  alt="Product Image"
+                  marginBottom="1rem"
+                  _hover={{ transform: "translateY(-5px)" }}
+                  transition="all 0.3s"
+                  borderRadius="md"
+                  width="200px" // Thiết lập chiều rộng là 200px
+                  height="200px" // Thiết lập chiều cao là 200px
+                />
               </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-facebook-f"></i>
-              </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-github"></i>
-              </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </Link>
-            </div>
-            <span>hoặc sử dụng email của bạn để đăng ký</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="button">Sign Up</button>
-          </form>
-        </div>
-        <div className="form-container sign-in">
-          <form>
-            <h1>Đăng nhập</h1>
-            <div className="social-icons">
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-google-plus-g"></i>
-              </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-facebook-f"></i>
-              </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-github"></i>
-              </Link>
-              <Link href="#" className="icon">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </Link>
-            </div>
-            <span>hoặc sử dụng mật khẩu email của bạn</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <Link href="#">Quên mật khẩu của bạn?</Link>
-            <button type="button">Đăng nhập</button>
-          </form>
-        </div>
-        <div className="toggle-container">
-          <div className="toggle">
-            <div className="toggle-panel toggle-left">
-              <h1>Chào mừng trở lại!</h1>
-              <p>
-                Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng
-                của trang web
-              </p>
-              <button className="hidden" id="login" onClick={handleLoginClick}>
-                Đăng nhập
-              </button>
-            </div>
-            <div className="toggle-panel toggle-right">
-              <h1>Chào bạn!</h1>
-              <p>
-                Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính
-                năng của trang web
-              </p>
-              <button
-                className="hidden"
-                id="register"
-                onClick={handleRegisterClick}
+              <Text fontSize="20px" fontWeight="bold" color="#000">
+                Macbook Air - M1
+              </Text>
+              <Text
+                fontSize="18px"
+                color="#0000007a"
+                textDecoration="line-through"
               >
-                Đăng ký
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Center>
+                Giá cũ: 1,200,000 VND
+              </Text>
+              <Text fontSize="16px" color="#f00" fontWeight="900">
+                Giá mới: 1,000,000 VND
+              </Text>
+              <Text fontSize="14px" color="#ffa500" fontWeight="900">
+                ★★★★☆
+              </Text>
+              <Link to={`/product/${index}`}>
+                <Button
+                  borderRadius="6px"
+                  colorScheme="red"
+                  width="100px"
+                  height="40px"
+                  marginTop="1rem"
+                  _hover={{ transform: "scale(1.05)" }}
+                  fontSize="16px"
+                >
+                  Mua hàng
+                </Button>
+              </Link>
+            </Box>
+          ))}
+        </Flex>
+
+        <br />
+
+        {/* Load More Button */}
+        <Flex justifyContent="center">
+          <Button
+            fontWeight="600"
+            borderRadius="6px"
+            borderColor="#2b6cb0"
+            className="load-more-button"
+            colorScheme="teal"
+            width="100px"
+            height="40px"
+            margin="10px"
+            borderWidth="1px"
+            fontSize="16px" // Font size lớn hơn
+            _hover={{
+              bg: "white",
+              color: "#2b6cb0",
+              borderColor: "#2b6cb0",
+            }}
+          >
+            Xem thêm
+          </Button>
+        </Flex>
+      </Box>
+    </div>
   );
 };
 
-export default Auth;
+export default MacProduct;

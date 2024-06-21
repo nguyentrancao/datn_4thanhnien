@@ -2,7 +2,7 @@ import { Box, Button, Flex, Text, Image, Select } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const PhoneProduct = () => {
+const AppleWatchProduct = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [clickedIndex, setClickedIndex] = useState(null);
 
@@ -136,7 +136,7 @@ const PhoneProduct = () => {
             >
               <Link to={`/product/${index}`}>
                 <Image
-                  src="https://cdn.phuckhangmobile.com/image/iphone-15-mau-xanh-duong-29738j.jpg"
+                  src="https://cdn.phuckhangmobile.com/image/apple-watch-series-6-vang-900-21196j.jpg"
                   alt="Product Image"
                   marginBottom="1rem"
                   _hover={{ transform: "translateY(-5px)" }}
@@ -147,7 +147,7 @@ const PhoneProduct = () => {
                 />
               </Link>
               <Text fontSize="20px" fontWeight="bold" color="#000">
-                Iphone 15 Pro
+                Apple Watch Series 6
               </Text>
               <Text
                 fontSize="18px"
@@ -208,4 +208,4 @@ const PhoneProduct = () => {
   );
 };
 
-export default PhoneProduct;
+export default AppleWatchProduct;
