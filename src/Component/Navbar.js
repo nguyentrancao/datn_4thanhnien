@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Flex, Heading, Input, Icon } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Input, Icon ,Image} from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
@@ -29,15 +29,16 @@ const Navbar = () => {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Box>
-                  <Flex w={"40%"}>
-                    <Box>
-                      <Link to="/" style={{ textDecoration: "none" }}>
-                        {/* Insert your logo or image here */}
-                      </Link>
-                    </Box>
-                  </Flex>
-                </Box>
+                  <Box>
+      <Flex w={"40%"}>
+        <Box>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            {/* Use the Image component from Chakra UI */}
+            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNS-96bdVmRxd8tlgDYqa47PNS3nJ9CZvNpw&s" alt="Logo" w={60} h={60}/>
+          </Link>
+        </Box>
+      </Flex>
+    </Box>
 
                 <Box w={"40%"}>
                   <Flex

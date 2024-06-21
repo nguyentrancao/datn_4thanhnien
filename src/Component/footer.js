@@ -20,7 +20,7 @@ const Footer = () => {
         justifyContent="space-between"
         alignItems="flex-end"
         width="100%"
-        mt="20px" // Added margin-top for spacing
+        mt={50}
       >
         <Flex
           justifyContent="space-between"
@@ -31,6 +31,7 @@ const Footer = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="flex-start"
+          
           >
             <Text
               color="#1A202C"
@@ -38,6 +39,7 @@ const Footer = () => {
               fontWeight="700"
               mb="10px"
               ml={120}
+              mt="-30px" // Adjusted margin-top to -30px
             >
               Phương thức thanh toán
             </Text>
@@ -47,8 +49,9 @@ const Footer = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="flex-start"
+           
           >
-            <Text color="#1A202C" fontSize="14.88px" fontWeight="700" mb="10px">
+            <Text color="#1A202C" fontSize="14.88px" fontWeight="700" mb="10px" mt="-30px"> {/* Adjusted margin-top to -30px */}
               Danh sách các ngân hàng thanh toán online
             </Text>
             <Image
@@ -57,6 +60,8 @@ const Footer = () => {
               height="60.49px"
               src="https://shopfront-cdn.tekoapis.com/static/vnpay_banks.png"
               alt="Bank logos"
+            
+
             />
           </Flex>
         </Flex>

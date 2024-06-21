@@ -4,7 +4,7 @@ import { Image } from "@chakra-ui/react";
 const ProductList = () => {
     return (
         <Center>
-            <Box p={4} borderRadius={8} w="100%" ml={20}>
+            <Box p={4} borderRadius={8} w="100%">
                 <Box display="flex" alignItems="center" mt={20}> <Text fontSize={40} as='b' mr={4}>Danh Mục</Text> </Box>
                 {/* <Grid
                     ml={20}
@@ -21,7 +21,7 @@ const ProductList = () => {
                     <Grid
                         templateColumns="repeat(6, 1fr)" // Số lượng cột bằng số lượng cột của Grid cha
                         gap={30} // Khoảng cách giữa các ô sản phẩm
-                        w="100%" // Chiều rộng bằng 100%
+                        w="80%" // Chiều rộng bằng 100%
                     >
 
                         <Box>
