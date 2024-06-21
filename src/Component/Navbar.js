@@ -1,11 +1,19 @@
 import React from "react";
-import { Box, Center, Flex, Heading, Input, Icon ,Image} from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  Heading,
+  Input,
+  Icon,
+  Image,
+} from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 import { IoIosPhonePortrait, IoIosLaptop } from "react-icons/io";
 import { CgAppleWatch } from "react-icons/cg";
-import { TbDeviceAirpodsCase } from "react-icons/tb";
+import { IoIosHeadset } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { PopoverBody, Popover } from "@chakra-ui/react";
 
@@ -29,16 +37,21 @@ const Navbar = () => {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                  <Box>
-      <Flex w={"40%"}>
-        <Box>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            {/* Use the Image component from Chakra UI */}
-            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNS-96bdVmRxd8tlgDYqa47PNS3nJ9CZvNpw&s" alt="Logo" w={60} h={60}/>
-          </Link>
-        </Box>
-      </Flex>
-    </Box>
+                <Box>
+                  <Flex w={"40%"}>
+                    <Box>
+                      <Link to="/" style={{ textDecoration: "none" }}>
+                        {/* Use the Image component from Chakra UI */}
+                        <Image
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNS-96bdVmRxd8tlgDYqa47PNS3nJ9CZvNpw&s"
+                          alt="Logo"
+                          w={60}
+                          h={60}
+                        />
+                      </Link>
+                    </Box>
+                  </Flex>
+                </Box>
 
                 <Box w={"40%"}>
                   <Flex
@@ -156,10 +169,10 @@ const Navbar = () => {
                         fontSize={"23px"}
                         mb={-5}
                       />
-                      Iphone
+                      iPhone
                     </Heading>
                   </Link>
-                  <Link to="/Mac" style={{ textDecoration: "none" }}>
+                  <Link to="/mac" style={{ textDecoration: "none" }}>
                     <Heading
                       fontSize="16px"
                       _hover={{ fontSize: "18px", transition: "0.3s" }}
@@ -177,10 +190,7 @@ const Navbar = () => {
                       MacBook
                     </Heading>
                   </Link>
-                  <Link
-                    to="/Danhmuc/AppleWatch"
-                    style={{ textDecoration: "none" }}
-                  >
+                  <Link to="/AppleWatch" style={{ textDecoration: "none" }}>
                     <Heading
                       fontWeight={600}
                       mr={35}
@@ -198,7 +208,7 @@ const Navbar = () => {
                       Apple Watch
                     </Heading>
                   </Link>
-                  <Link to="/Danhmuc/Airpod" style={{ textDecoration: "none" }}>
+                  <Link to="/Airpod" style={{ textDecoration: "none" }}>
                     <Heading
                       fontWeight={600}
                       mr="35"
@@ -208,12 +218,12 @@ const Navbar = () => {
                       color="#555"
                     >
                       <Icon
-                        as={TbDeviceAirpodsCase}
+                        as={IoIosHeadset}
                         color="#555"
                         fontSize={"23px"}
                         mb={-5}
                       />
-                      Airpod
+                      AirPod
                     </Heading>
                   </Link>
                 </Flex>

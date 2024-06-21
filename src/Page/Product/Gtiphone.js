@@ -39,11 +39,12 @@ const ProductCard = () => {
   // };
 
   return (
-    <Box width="80%" mx="auto" mt={10}>
+    
+    <Box width="80%"  mt={10} ml={145} >
       <Grid
         ml={12}
         mt={50}
-        w="100%"
+        
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
         justifyContent="center"
@@ -54,14 +55,14 @@ const ProductCard = () => {
           src="https://i.postimg.cc/YCRGGw0Z/Untitled.png"
           alt="Dan Abramov"
           h={351}
-          w={377}
+          w={290}
           borderRadius={20}
         />
         {products.map((product, index) => (
           <GridItem
             key={index}
             h="355px"
-            w="227px"
+            w="210px"
             bg="white"
             borderRadius={8}
             boxShadow="lg"
@@ -78,7 +79,7 @@ const ProductCard = () => {
                 mt={10}
                 borderRadius={8}
                 marginBottom={20}
-                mt={20}
+              
               />
             </Center>
             <Text fontSize="2xl" as="b" textAlign="center">

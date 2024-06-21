@@ -4,9 +4,8 @@ import Auth from "./Page/Auth/Auth.js";
 import Cart from "./Page/Cart/Cart";
 import Phone from "./Page/Phone/Phone.js";
 import Mac from "./Page/Phone/Mac.js";
-// import Mac from "./Page/Danhmuc/Mac";
-// import AppleWatch from "./Page/Danhmuc/AppleWatch";
-// import Airpod from "./Page/Danhmuc/Airpod";
+import AppleWatch from "./Page/Phone/AppleWatch.js";
+import Airpod from "./Page/Phone/Airpod.js";
 
 const routes = [
   { path: "/", component: Home },
@@ -15,6 +14,8 @@ const routes = [
   { path: "/Cart", component: Cart },
   { path: "/Phone", component: Phone },
   { path: "/Mac", component: Mac },
+  { path: "/AppleWatch", component: AppleWatch },
+  { path: "/Airpod", component: Airpod },
 ];
 
 export default routes;
