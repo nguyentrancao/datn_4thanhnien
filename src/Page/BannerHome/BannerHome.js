@@ -18,7 +18,7 @@ const images = [
     description: "Hiệu năng vượt trội với con chip A16 Pro tốc độ xử lý nhanh hơn IPhone 11 Pro Max",
   },
   {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyNet_blhIF4BHGUyXUZmNFiPJqcqi_pWsDw&s",
+    src: "https://images.hindustantimes.com/tech/img/2023/10/03/960x540/iPhone_1696304572240_1696304572418.jpg",
     alt: "IPhone 13 Pro Max",
     title: "IPhone 13 Pro Max",
     description: "Hiệu năng vượt trội với con chip A15 Pro tốc độ xử lý nhanh hơn IPhone 10 Pro Max",

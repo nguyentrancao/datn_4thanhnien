@@ -107,7 +107,7 @@ const Cart = () => {
             <Flex flex="1" direction="column" mt={15} ml={10} mr={10}>
               <Box>
                 <Text fontSize="18" color={"blue"} mb={2}>
-                HP Omen 16 n0085AX R9 6900HX (7C144PA)
+                  HP Omen 16 n0085AX R9 6900HX (7C144PA)
                 </Text>
 
                 <Text color="gray.800" as={"i"} mb={2} fontSize={16}>
@@ -188,23 +188,39 @@ const Cart = () => {
             </Center>
           </Box>
         </Flex>
-        <Flex w="100%" flexDirection="column" alignItems="center" gap={4} mt={50}>
-          <Button w="80%" borderRadius={8} h={50} bgColor={"red"} color={"white"} fontSize={16} as={"b"}>
+        <Flex
+          w="100%"
+          flexDirection="column"
+          alignItems="center"
+          gap={4}
+          mt={50}
+        >
+          <Button
+            w="80%"
+            borderRadius={8}
+            h={50}
+            bgColor={"red"}
+            color={"white"}
+            fontSize={16}
+            as={"b"}
+          >
             <Text>Tiến hành đặt hàng</Text>
           </Button>
-          <Button w="80%" borderRadius={8} h={50} bgColor={"white"} color={"red"} fontSize={16} as={"b"} border="1px solid #FF0000" mt={10}>
+          <Button
+            w="80%"
+            borderRadius={8}
+            h={50}
+            bgColor={"white"}
+            color={"red"}
+            fontSize={16}
+            as={"b"}
+            border="1px solid #FF0000"
+            mt={10}
+          >
             <Text>Chọn thêm sản phẩm khác</Text>
           </Button>
         </Flex>
       </Box>
-      <Box
-            border="0.5px"
-            borderBottomColor="black"
-            borderBottomStyle="solid"
-            borderTopColor="black"
-            borderTopStyle="solid"
-            mb={10}
-          ></Box>
     </Center>
   );
 };
