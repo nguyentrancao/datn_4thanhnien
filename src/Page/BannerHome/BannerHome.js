@@ -1,6 +1,14 @@
-import React from 'react';
-import { Box, Text, Button, Grid, GridItem, Center, Image } from "@chakra-ui/react";
-import Slider from 'react-slick';
+import React from "react";
+import {
+  Box,
+  Text,
+  Button,
+  Grid,
+  GridItem,
+  Center,
+  Image,
+} from "@chakra-ui/react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -9,19 +17,22 @@ const images = [
     src: "https://isotech-demo.myshopify.com/cdn/shop/files/2_ae5cc69e-78af-4aea-9cc7-bb616d558539.png?v=1695797615",
     alt: "IPhone 15 Pro Max",
     title: "IPhone 15 Pro Max",
-    description: "Hiệu năng vượt trội với con chip A17 Pro tốc độ xử lý nhanh hơn IPhone 12 Pro Max",
+    description:
+      "Hiệu năng vượt trội với con chip A17 Pro tốc độ xử lý nhanh hơn IPhone 12 Pro Max",
   },
   {
     src: "https://isotech-demo.myshopify.com/cdn/shop/files/Frame_14.png?v=1695797658&width=1500",
     alt: "IPhone 14 Pro Max",
     title: "IPhone 14 Pro Max",
-    description: "Hiệu năng vượt trội với con chip A16 Pro tốc độ xử lý nhanh hơn IPhone 11 Pro Max",
+    description:
+      "Hiệu năng vượt trội với con chip A16 Pro tốc độ xử lý nhanh hơn IPhone 11 Pro Max",
   },
   {
     src: "https://isotech-demo.myshopify.com/cdn/shop/files/Frame_15.png?v=1695797682&width=1500",
     alt: "IPhone 13 Pro Max",
     title: "IPhone 13 Pro Max",
-    description: "Hiệu năng vượt trội với con chip A15 Pro tốc độ xử lý nhanh hơn IPhone 10 Pro Max",
+    description:
+      "Hiệu năng vượt trội với con chip A15 Pro tốc độ xử lý nhanh hơn IPhone 10 Pro Max",
   },
 ];
 
@@ -29,11 +40,11 @@ const BannerHome = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    speed: 5000, // Chuyển đổi slide sau mỗi 1 giây
+    slidesToShow: 1, // Hiển thị 1 slide cùng lúc
+    slidesToScroll: 1, // Chuyển đổi 1 slide khi chuyển đổi
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 1000, // Chuyển slide sau mỗi 1 giây
   };
 
   return (
@@ -46,7 +57,13 @@ const BannerHome = () => {
         templateColumns="repeat(12, 1fr)"
         gap={4}
       >
-        <GridItem h="350px" rowSpan={2} colSpan={9} bg="tomato" borderRadius={8}>
+        <GridItem
+          h="350px"
+          rowSpan={2}
+          colSpan={9}
+          bg="tomato"
+          borderRadius={8}
+        >
           <Slider {...settings}>
             {images.map((image, index) => (
               <Box key={index} position="relative" borderRadius={8}>
@@ -79,7 +96,7 @@ const BannerHome = () => {
                     backgroundColor="white"
                     color="black"
                     fontWeight="bold"
-                    _hover={{ backgroundColor: '', color: 'blue' }}
+                    _hover={{ backgroundColor: "", color: "blue" }}
                     onClick={() => {
                       // Handle button click
                     }}

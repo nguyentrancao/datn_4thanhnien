@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 import { IoIosPhonePortrait, IoIosLaptop } from "react-icons/io";
 import { CgAppleWatch } from "react-icons/cg";
-import { TbDeviceAirpodsCase } from "react-icons/tb";
+import { IoIosHeadset } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { PopoverBody, Popover } from "@chakra-ui/react";
 
@@ -95,7 +95,6 @@ const Navbar = () => {
                     </Box>
 
                     <Box ml={10}>
-<<<<<<< HEAD
                       <Link to="/cart" style={{ textDecoration: "none" }}>
                         <Flex>
                           <Icon
@@ -114,26 +113,6 @@ const Navbar = () => {
                             Giỏ hàng
                           </Heading>
                         </Flex>
-=======
-                    <Link to="/cart" style={{ textDecoration: "none" }}>
-                      <Flex>
-                        <Icon
-                          as={BsCart2}
-                          fontSize={"25px"}
-                          color={"#555"}
-                          margin={2}
-                        />
-                        <Heading
-                          fontWeight={400}
-                          m="2"
-                          cursor={"pointer"}
-                          fontSize={"18px"}
-                          color="#555"
-                        >
-                          Giỏ hàng
-                        </Heading>
-                      </Flex>
->>>>>>> f8c206415d833069d6e860915addbcedfdd70fd4
                       </Link>
                     </Box>
                   </Flex>
@@ -176,10 +155,10 @@ const Navbar = () => {
                         fontSize={"23px"}
                         mb={-5}
                       />
-                      Iphone
+                      iPhone
                     </Heading>
                   </Link>
-                  <Link to="/Mac" style={{ textDecoration: "none" }}>
+                  <Link to="/danhmuc/mac" style={{ textDecoration: "none" }}>
                     <Heading
                       fontSize="16px"
                       _hover={{ fontSize: "18px", transition: "0.3s" }}
@@ -198,7 +177,7 @@ const Navbar = () => {
                     </Heading>
                   </Link>
                   <Link
-                    to="/Danhmuc/AppleWatch"
+                    to="/danhmuc/applewatch"
                     style={{ textDecoration: "none" }}
                   >
                     <Heading
@@ -218,7 +197,7 @@ const Navbar = () => {
                       Apple Watch
                     </Heading>
                   </Link>
-                  <Link to="/Danhmuc/Airpod" style={{ textDecoration: "none" }}>
+                  <Link to="/danhmuc/airpod" style={{ textDecoration: "none" }}>
                     <Heading
                       fontWeight={600}
                       mr="35"
@@ -228,12 +207,12 @@ const Navbar = () => {
                       color="#555"
                     >
                       <Icon
-                        as={TbDeviceAirpodsCase}
+                        as={IoIosHeadset}
                         color="#555"
                         fontSize={"23px"}
                         mb={-5}
                       />
-                      Airpod
+                      AirPod
                     </Heading>
                   </Link>
                 </Flex>
