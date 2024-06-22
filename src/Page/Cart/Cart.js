@@ -1,69 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
-  Flex,
   Button,
-  Heading,
   Text,
-  Image,
   Center,
+  Flex,
+  Heading,
+  Image,
 } from "@chakra-ui/react";
-// import { AiOutlinePlus} from "react-icons/ai";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  // const [cartItems] = useState([
-  //   {
-  //     id: 1,
-  //     name: "Product A",
-  //     price: 19.99,
-  //     quantity: 1,
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Product B",
-  //     price: 24.99,
-  //     quantity: 2,
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Product C",
-  //     price: 14.99,
-  //     quantity: 1,
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  // ]);
-  // const calculateTotal = () => {
-  //   // Code for calculating the total amount
-  //   return cartItems.reduce(
-  //     (total, item) => total + item.price * item.quantity,
-  //     0
-  //   );
-  // };
-
   return (
     <Center>
-      <Box
-        w={"50%"}
-        // p={6}
-
-        bg="gray.100"
-        mt="130"
-      >
-        <Heading>
-          <Text fontSize={40} as="b" ml={250}>
-            Giỏ hàng của bạn
-          </Text>
+      <Box w="50%" bg="gray.100" mt="130">
+        <Heading fontSize={40} as="b" ml={250}>
+          Giỏ hàng của bạn
         </Heading>
         <Box
           border="1px solid #ccc"
           borderRadius="5"
           bg="gray.100"
           h={50}
-          display="flex" // Sử dụng flexbox
-          alignItems="center" // Căn giữa theo chiều dọc
+          display="flex"
+          alignItems="center"
           justifyContent="flex-start"
           mt={30}
         >
@@ -73,24 +34,24 @@ const Cart = () => {
         </Box>
         <Box
           border="1px solid #ccc"
-          w="100%" // Đặt chiều rộng của Box
-          p={4} // Padding của Box
-          borderWidth="1px" // Độ dày của đường viền
+          w="100%"
+          p={4}
+          borderWidth="1px"
           borderRadius={5}
-          overflow="hidden" // Ẩn những phần tràn ra ngoài
-          bg="white" // Màu nền của Box
-          boxShadow="lg" // Đổ bóng cho Box
-          m="auto" // Căn giữa Box
+          overflow="hidden"
+          bg="white"
+          boxShadow="lg"
+          m="auto"
           mt={20}
         >
           <Flex borderRadius="8">
             <Box w="160px" h="160px" mr={4} ml={4}>
               <Image
-                src="https://cdn.tgdd.vn/Products/Images/44/302982/hp-omen-16-n0085ax-r9-7c144pa-thumb-fix-600x600.jpg" // URL của hình ảnh sản phẩm
+                src="https://cdn.tgdd.vn/Products/Images/44/302982/hp-omen-16-n0085ax-r9-7c144pa-thumb-fix-600x600.jpg"
                 alt="Sản phẩm"
-                objectFit="cover" // Đảm bảo hình ảnh phủ kín Box
-                w="100%" // Chiều rộng của hình ảnh
-                h="auto" // Chiều cao của hình ảnh
+                objectFit="cover"
+                w="100%"
+                h="auto"
               />
               <Button
                 leftIcon={<DeleteIcon />}
@@ -109,7 +70,6 @@ const Cart = () => {
                 <Text fontSize="18" color={"blue"} mb={2}>
                   HP Omen 16 n0085AX R9 6900HX (7C144PA)
                 </Text>
-
                 <Text color="gray.800" as={"i"} mb={2} fontSize={16}>
                   Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản
                   phẩm này
@@ -125,14 +85,14 @@ const Cart = () => {
               </Text>
             </Box>
           </Flex>
-          <Flex borderRadius="8">
+          <Flex borderRadius="8" mt={10}>
             <Box w="160px" h="160px" mr={4} ml={4}>
               <Image
-                src="https://cdn.tgdd.vn/Products/Images/44/302984/hp-elitebook-dragonfly-g3-i7-6z980pa-070323-114211-600x600.jpg" // URL của hình ảnh sản phẩm
+                src="https://cdn.tgdd.vn/Products/Images/44/302984/hp-elitebook-dragonfly-g3-i7-6z980pa-070323-114211-600x600.jpg"
                 alt="Sản phẩm"
-                objectFit="cover" // Đảm bảo hình ảnh phủ kín Box
-                w="100%" // Chiều rộng của hình ảnh
-                h="auto" // Chiều cao của hình ảnh
+                objectFit="cover"
+                w="100%"
+                h="auto"
               />
               <Button
                 leftIcon={<DeleteIcon />}
@@ -151,7 +111,6 @@ const Cart = () => {
                 <Text fontSize="18" color={"blue"} mb={2}>
                   HP Elitebook Dragonfly G3 i7 1255U (6Z980PA)
                 </Text>
-
                 <Text color="gray.800" as={"i"} mb={2} fontSize={16}>
                   Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản
                   phẩm này
@@ -168,22 +127,11 @@ const Cart = () => {
             </Box>
           </Flex>
         </Box>
-        <Flex>
-          <Box mt={15} w={"100%"}>
+        <Flex mt={10} justify="center" w="100%">
+          <Box w="50%">
             <Center>
-              <Text fontSize={22} as={"b"} align={"center"} w={"50%"}>
-                {" "}
-                Tạm tính :
-              </Text>
-              <Text
-                fontSize={22}
-                as={"b"}
-                align={"center"}
-                w={"50%"}
-                color={"red"}
-              >
-                {" "}
-                81,913,000 ₫
+              <Text fontSize={22} as={"b"}>
+                Tạm tính : 81,913,000 ₫
               </Text>
             </Center>
           </Box>
@@ -193,19 +141,21 @@ const Cart = () => {
           flexDirection="column"
           alignItems="center"
           gap={4}
-          mt={50}
+          mt={10}
         >
-          <Button
-            w="80%"
-            borderRadius={8}
-            h={50}
-            bgColor={"red"}
-            color={"white"}
-            fontSize={16}
-            as={"b"}
-          >
-            <Text>Tiến hành đặt hàng</Text>
-          </Button>
+          <Link to="/Payment">
+            <Button
+              w="640px"
+              borderRadius={8}
+              h={50}
+              bgColor={"red"}
+              color={"white"}
+              fontSize={16}
+              as={"b"}
+            >
+              Tiến hành đặt hàng
+            </Button>
+          </Link>
           <Button
             w="80%"
             borderRadius={8}
@@ -215,9 +165,8 @@ const Cart = () => {
             fontSize={16}
             as={"b"}
             border="1px solid #FF0000"
-            mt={10}
           >
-            <Text>Chọn thêm sản phẩm khác</Text>
+            Chọn thêm sản phẩm khác
           </Button>
         </Flex>
       </Box>
