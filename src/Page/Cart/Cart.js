@@ -22,7 +22,7 @@ const Cart = () => {
     {
       id: 1,
       name: "Product A",
-      price: 19.99,
+      price: 19.99, 
       quantity: 1,
       image: "https://via.placeholder.com/150",
     },
