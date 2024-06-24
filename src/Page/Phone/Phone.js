@@ -134,7 +134,7 @@ const PhoneProduct = () => {
               justifyContent="center"
               alignItems="center" // căn giữa theo chiều ngang
             >
-              <Link to={`/product/${index}`}>
+              <Link to="/detail" >
                 <Image
                   src="https://cdn.phuckhangmobile.com/image/iphone-15-mau-xanh-duong-29738j.jpg"
                   alt="Product Image"
@@ -162,7 +162,7 @@ const PhoneProduct = () => {
               <Text fontSize="14px" color="#ffa500" fontWeight="900">
                 ★★★★☆
               </Text>
-              <Link to={`/product/${index}`}>
+              <Link to="/detail" >
                 <Button
                   borderRadius="6px"
                   colorScheme="red"

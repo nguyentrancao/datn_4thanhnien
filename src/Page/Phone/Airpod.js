@@ -134,7 +134,7 @@ const AppleWatchProduct = () => {
               justifyContent="center"
               alignItems="center" // căn giữa theo chiều ngang
             >
-              <Link to={`/product/${index}`}>
+              <Link to={`../Cart/Cart.js`}>
                 <Image
                   src="https://hanhtech.com/wp-content/uploads/2024/01/tai-nghe-apple-airpods-pro-new-2-image.png"
                   alt="Product Image"
