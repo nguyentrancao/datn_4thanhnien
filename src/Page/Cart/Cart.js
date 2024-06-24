@@ -12,6 +12,7 @@ import {
 import { DeleteIcon } from "@chakra-ui/icons";
 
 const Cart = () => {
+
   // const [cartItems] = useState([
   //   {
   //     id: 1,
@@ -42,6 +43,47 @@ const Cart = () => {
   //     0
   //   );
   // };
+
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: "Product A",
+      price: 19.99, 
+      quantity: 1,
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 2,
+      name: "Product B",
+      price: 24.99,
+      quantity: 2,
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 3,
+      name: "Product C",
+      price: 14.99,
+      quantity: 1,
+      image: "https://via.placeholder.com/150",
+    },
+  ]);
+
+  const handleQuantityChange = (itemId, operation) => {
+    // Code for handling quantity change
+  };
+
+  const handleRemoveItem = (itemId) => {
+    // Code for removing an item from the cart
+  };
+
+  const calculateTotal = () => {
+    // Code for calculating the total amount
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
+
 
   return (
     <Center>

@@ -5,7 +5,13 @@ import Cart from "./Page/Cart/Cart";
 import Phone from "./Page/Phone/Phone.js";
 import Mac from "./Page/Phone/Mac.js";
 import AppleWatch from "./Page/Phone/AppleWatch.js";
-import Airpod from "./Page/Phone/Airpod.js";
+import Airpod from "./Page/Phone/Airpod";
+import Detail from "./Page/Detail/Detail.js";
+
+// import Mac from "./Page/Danhmuc/Mac";
+// import AppleWatch from "./Page/Danhmuc/AppleWatch";
+// import Airpod from "./Page/Danhmuc/Airpod";
+
 
 const routes = [
   { path: "/", component: Home },
@@ -16,6 +22,7 @@ const routes = [
   { path: "/Mac", component: Mac },
   { path: "/AppleWatch", component: AppleWatch },
   { path: "/Airpod", component: Airpod },
+  { path: "/Detail", component: Detail},
 ];
 
 export default routes;
