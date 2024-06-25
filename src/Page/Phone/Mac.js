@@ -136,14 +136,14 @@ const MacProduct = () => {
             >
               <Link to={`/product/${index}`}>
                 <Image
-                  src="https://bizweb.dktcdn.net/thumb/1024x1024/100/444/581/products/16-jpeg-d3d34343-fa06-4733-949e-jpeg-a29433a2-f2c8-4d26-a386-d6dbdfe88e8d.jpg?v=1673243952283"
+                  src="https://www.apple.com/v/macbook-air/s/images/overview/performance/compare/model_mba_m2__cfrbip6c05yq_large_2x.jpg"
                   alt="Product Image"
                   marginBottom="1rem"
                   _hover={{ transform: "translateY(-5px)" }}
                   transition="all 0.3s"
                   borderRadius="md"
-                  width="200px" // Thiết lập chiều rộng là 200px
-                  height="200px" // Thiết lập chiều cao là 200px
+                  width="100%" // Thiết lập chiều rộng là 200px
+                  height="100%" // Thiết lập chiều cao là 200px
                 />
               </Link>
               <Text fontSize="20px" fontWeight="bold" color="#000">
