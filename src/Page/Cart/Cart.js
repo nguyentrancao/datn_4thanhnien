@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Button,
@@ -7,6 +7,7 @@ import {
   Flex,
   Heading,
   Image,
+  useState,
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -15,28 +16,37 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "HP Omen 16 n0085AX R9 6900HX (7C144PA)",
-      price: 47521000,
+      name: "Product A",
+      price: 19.99, 
       quantity: 1,
-      image:
-        "https://cdn.tgdd.vn/Products/Images/44/302982/hp-omen-16-n0085ax-r9-7c144pa-thumb-fix-600x600.jpg",
+      image: "https://via.placeholder.com/150",
     },
     {
       id: 2,
-      name: "HP Elitebook Dragonfly G3 i7 1255U (6Z980PA)",
-      price: 34392000,
+      name: "Product B",
+      price: 24.99,
       quantity: 2,
-      image:
-        "https://cdn.tgdd.vn/Products/Images/44/302984/hp-elitebook-dragonfly-g3-i7-6z980pa-070323-114211-600x600.jpg",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 3,
+      name: "Product C",
+      price: 14.99,
+      quantity: 1,
+      image: "https://via.placeholder.com/150",
     },
   ]);
 
+  const handleQuantityChange = (itemId, operation) => {
+    // Code for handling quantity change
+  };
+
   const handleRemoveItem = (itemId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
-    setCartItems(updatedCartItems);
+    // Code for removing an item from the cart
   };
 
   const calculateTotal = () => {
+    // Code for calculating the total amount
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0
@@ -45,72 +55,157 @@ const Cart = () => {
 
   return (
     <Center>
-      <Box w="80%" bg="gray.100" mt={10} p={4} borderRadius="md">
-        <Heading fontSize="2xl" textAlign="center" mb={4}>
+      <Box w="50%" bg="gray.100" mt="130">
+        <Heading fontSize={40} as="b" ml={250}>
           Giỏ hàng của bạn
         </Heading>
-
-        {cartItems.map((item) => (
-          <Flex key={item.id} alignItems="center" mt={4} p={4} bg="white" borderRadius="md" boxShadow="md">
-            <Image src={item.image} alt={item.name} boxSize="160px" objectFit="cover" mr={4} />
-
-            <Flex direction="column" flex="1">
-              <Text fontSize="xl" fontWeight="bold" color="blue.500" mb={2}>
-                {item.name}
-              </Text>
-              <Text fontSize="md" color="gray.600" mb={2}>
-                Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản phẩm này
-              </Text>
+        <Box
+          border="1px solid #ccc"
+          borderRadius="5"
+          bg="gray.100"
+          h={50}
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start"
+          mt={30}
+        >
+          <Text ml={10} fontSize={18}>
+            Giỏ hàng (2 sản phẩm)
+          </Text>
+        </Box>
+        <Box
+          border="1px solid #ccc"
+          w="100%"
+          p={4}
+          borderWidth="1px"
+          borderRadius={5}
+          overflow="hidden"
+          bg="white"
+          boxShadow="lg"
+          m="auto"
+          mt={20}
+        >
+          <Flex borderRadius="8">
+            <Box w="160px" h="160px" mr={4} ml={4}>
+              <Image
+                src="https://cdn.tgdd.vn/Products/Images/44/302982/hp-omen-16-n0085ax-r9-7c144pa-thumb-fix-600x600.jpg"
+                alt="Sản phẩm"
+                objectFit="cover"
+                w="100%"
+                h="auto"
+              />
               <Button
                 leftIcon={<DeleteIcon />}
-                colorScheme="gray"
-                size="sm"
-                onClick={() => handleRemoveItem(item.id)}
+                mt={10}
+                ml={55}
+                color={"gray"}
+                fontSize={15}
+                border="none"
+                bgColor={"white"}
               >
                 Xóa
               </Button>
+            </Box>
+            <Flex flex="1" direction="column" mt={15} ml={10} mr={10}>
+              <Box>
+                <Text fontSize="18" color={"blue"} mb={2}>
+                  HP Omen 16 n0085AX R9 6900HX (7C144PA)
+                </Text>
+                <Text color="gray.800" as={"i"} mb={2} fontSize={16}>
+                  Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản
+                  phẩm này
+                </Text>
+              </Box>
             </Flex>
-
-            <Flex direction="column" alignItems="flex-end">
-              <Text fontSize="xl" color="red.500" fontWeight="bold" mb={2}>
-                {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}
+            <Box>
+              <Text mt={15} color="red" fontWeight="bold" fontSize="xl" mb={5}>
+                Giá giảm: 47.521.000 ₫
               </Text>
-              <Text fontSize="md" color="gray.500" textDecoration="line-through">
-                Giá gốc: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price * 1.1)}
+              <Text color="gray" textDecoration="line-through">
+                Giá gốc: 52.273.100 ₫
               </Text>
-            </Flex>
+            </Box>
           </Flex>
-        ))}
-
-        <Flex mt={6} justify="space-between">
-          <Text fontSize="xl" fontWeight="bold">
-            Tạm tính: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(calculateTotal())}
-          </Text>
+          <Flex borderRadius="8" mt={10}>
+            <Box w="160px" h="160px" mr={4} ml={4}>
+              <Image
+                src="https://cdn.tgdd.vn/Products/Images/44/302984/hp-elitebook-dragonfly-g3-i7-6z980pa-070323-114211-600x600.jpg"
+                alt="Sản phẩm"
+                objectFit="cover"
+                w="100%"
+                h="auto"
+              />
+              <Button
+                leftIcon={<DeleteIcon />}
+                mt={10}
+                ml={55}
+                color={"gray"}
+                fontSize={15}
+                border="none"
+                bgColor={"white"}
+              >
+                Xóa
+              </Button>
+            </Box>
+            <Flex flex="1" direction="column" mt={15} ml={10} mr={10}>
+              <Box>
+                <Text fontSize="18" color={"blue"} mb={2}>
+                  HP Elitebook Dragonfly G3 i7 1255U (6Z980PA)
+                </Text>
+                <Text color="gray.800" as={"i"} mb={2} fontSize={16}>
+                  Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản
+                  phẩm này
+                </Text>
+              </Box>
+            </Flex>
+            <Box>
+              <Text mt={15} color="red" fontWeight="bold" fontSize="xl" mb={5}>
+                Giá giảm: 34.392.000 ₫
+              </Text>
+              <Text color="gray" textDecoration="line-through">
+                Giá gốc: 41.270.400 ₫
+              </Text>
+            </Box>
+          </Flex>
+        </Box>
+        <Flex mt={10} justify="center" w="100%">
+          <Box w="50%">
+            <Center>
+              <Text fontSize={22} as={"b"}>
+                Tạm tính : 81,913,000 ₫
+              </Text>
+            </Center>
+          </Box>
         </Flex>
-
-        <Flex mt={6} justify="center" direction="column" alignItems="center">
+        <Flex
+          w="100%"
+          flexDirection="column"
+          alignItems="center"
+          gap={4}
+          mt={10}
+        >
           <Link to="/Payment">
             <Button
-              w="100%"
-              maxW="640px"
-              borderRadius="md"
-              colorScheme="red"
-              color="white"
-              fontSize="lg"
-              fontWeight="bold"
-              mb={4}
+              w="640px"
+              borderRadius={8}
+              h={50}
+              bgColor={"red"}
+              color={"white"}
+              fontSize={16}
+              as={"b"}
             >
               Tiến hành đặt hàng
             </Button>
           </Link>
           <Button
-            w="100%"
-            maxW="640px"
-            borderRadius="md"
-            colorScheme="red"
-            variant="outline"
-            fontSize="lg"
-            fontWeight="bold"
+            w="80%"
+            borderRadius={8}
+            h={50}
+            bgColor={"white"}
+            color={"red"}
+            fontSize={16}
+            as={"b"}
+            border="1px solid #FF0000"
           >
             Chọn thêm sản phẩm khác
           </Button>

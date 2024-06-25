@@ -1,6 +1,6 @@
 import { Box, Center, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-
+import { Link } from "react-router-dom";
 const ProductTop = () => {
   return (
     <Center>
@@ -88,6 +88,7 @@ const ProductTop = () => {
             borderRadius={8}
             mt={-70}
           >
+            <Link to="/detail" style={{ textDecoration: "none" }}>
             <Center>
               <Image
                 src="https://cdn.tgdd.vn/Products/Images/42/290829/samsung-galaxy-s23-plus-600x600.jpg"
@@ -129,6 +130,7 @@ const ProductTop = () => {
               </Text>
             </Flex>
             </Box>
+            </Link>
           </GridItem>
           <GridItem
             mr={2}

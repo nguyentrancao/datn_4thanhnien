@@ -13,7 +13,7 @@ import {
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
-import { IoIosPhonePortrait, IoIosLaptop } from "react-icons/io";
+import { IoIosPhonePortrait, IoIosLaptop, IoIosHeadset } from "react-icons/io";
 import { CgAppleWatch } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
@@ -39,8 +39,12 @@ const Navbar = () => {
         >
           <Box>
             <Link to="/" style={{ textDecoration: "none" }}>
-              {/* Insert your logo or image here */}
-              <Image src="/path/to/your/logo.png" alt="Logo" />
+              <Image
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNS-96bdVmRxd8tlgDYqa47PNS3nJ9CZvNpw&s"
+                alt="Logo"
+                w={60}
+                h={60}
+              />
             </Link>
           </Box>
 
@@ -65,42 +69,38 @@ const Navbar = () => {
             </Flex>
           </Box>
 
-          <Box w="25%">
-            <Flex justifyContent="flex-end">
-              <Box ml={10}>
-                <Flex alignItems="center">
-                  <Icon as={FaUser} fontSize="24px" color="#555" />
-                  <Link to="/auth" style={{ textDecoration: "none" }}>
-                    <Heading
-                      fontWeight={400}
-                      ml="2"
-                      cursor="pointer"
-                      fontSize="18px"
-                      color="#555"
-                    >
-                      Đăng nhập
-                    </Heading>
-                  </Link>
-                </Flex>
-              </Box>
-
-              <Box ml={10}>
-                <Link to="/cart" style={{ textDecoration: "none" }}>
-                  <Flex alignItems="center">
-                    <Icon as={BsCart2} fontSize="25px" color="#555" />
-                    <Heading
-                      fontWeight={400}
-                      ml="2"
-                      cursor="pointer"
-                      fontSize="18px"
-                      color="#555"
-                    >
-                      Giỏ hàng
-                    </Heading>
-                  </Flex>
-                </Link>
-              </Box>
+          <Box>
+            <Flex alignItems="center">
+              <Icon as={FaUser} fontSize="24px" color="#555" />
+              <Link to="/auth" style={{ textDecoration: "none" }}>
+                <Heading
+                  fontWeight={400}
+                  ml="2"
+                  cursor="pointer"
+                  fontSize="18px"
+                  color="#555"
+                >
+                  Đăng nhập
+                </Heading>
+              </Link>
             </Flex>
+          </Box>
+
+          <Box>
+            <Link to="/cart" style={{ textDecoration: "none" }}>
+              <Flex alignItems="center">
+                <Icon as={BsCart2} fontSize="25px" color="#555" />
+                <Heading
+                  fontWeight={400}
+                  ml="2"
+                  cursor="pointer"
+                  fontSize="18px"
+                  color="#555"
+                >
+                  Giỏ hàng
+                </Heading>
+              </Flex>
+            </Link>
           </Box>
         </Flex>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
                       mb={-2}
                       mr={2}
                     />
-                    Iphone
+                    Điện thoại
                   </Heading>
                 </Link>
 
@@ -152,12 +152,12 @@ const Navbar = () => {
                       mb={-2}
                       mr={2}
                     />
-                    MacBook
+                    Laptop
                   </Heading>
                 </Link>
 
                 <Link
-                  to="/Danhmuc/AppleWatch"
+                  to="/AppleWatch"
                   style={{ textDecoration: "none" }}
                 >
                   <Heading
@@ -179,7 +179,10 @@ const Navbar = () => {
                   </Heading>
                 </Link>
 
-                <Link to="/Danhmuc/Airpod" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/Airpod"
+                  style={{ textDecoration: "none" }}
+                >
                   <Heading
                     fontSize="16px"
                     _hover={{ fontSize: "18px", transition: "0.3s" }}
@@ -188,13 +191,13 @@ const Navbar = () => {
                     color="#555"
                   >
                     <Icon
-                      // as={CgAirpod}
+                      as={IoIosHeadset}
                       color="#555"
                       fontSize="23px"
                       mb={-2}
                       mr={2}
                     />
-                    Airpod
+                    AirPods
                   </Heading>
                 </Link>
               </Flex>

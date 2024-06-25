@@ -7,7 +7,7 @@ const ProductCard = () => {
     {
       name: "HP Gaming VICTUS 16 r0128TX i5 13450HX",
       price: "50,000,000",
-      image: "https://imagetolink.com/ib/0IyvsBeFtJ",
+      image: "https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg",
     },
     {
       name: "Samsung Galaxy Watch6 Classic LTE 47mm",

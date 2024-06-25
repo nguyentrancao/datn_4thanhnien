@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -13,240 +13,302 @@ import {
   Center,
   Icon,
   Image,
+  useDisclosure,
 } from "@chakra-ui/react";
+
 import {
   AiOutlineCreditCard,
   AiOutlineHome,
-  AiOutlineMail,
-  AiOutlinePhone,
+  AiOutlineDelete,
+  AiOutlineClose, // Import icon for close button
 } from "react-icons/ai";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Payment = () => {
+  const [isAddressFormVisible, setAddressFormVisible] = useState(false);
+
+  const openAddressForm = () => setAddressFormVisible(true);
+  const closeAddressForm = () => setAddressFormVisible(false);
+
   return (
-    <Center minH="170vh">
-      <Box w="750px" p={6} bg="#006f3c" borderRadius="8px">
-        <Heading mb={6}>
-          <Text fontSize={30} as="b" color="white">
-            Thanh toán
+    <Center minH="170vh" bg="#f5f5f5" py={6}>
+      <Box
+        w="800px"
+        p={6}
+        bg="white"
+        borderRadius="8px"
+        boxShadow="md"
+        position="relative"
+      >
+        <Heading mb={6} textAlign="center">
+          <Text fontSize="32px" as="b">
+            Đặt hàng
           </Text>
         </Heading>
 
-        <Flex
-          justify="space-between"
-          bg="#eceff1  "
+        {/* Địa chỉ nhận hàng */}
+        <Box
+          mb={2}
+          p={4}
+          border="1px solid #d3d3d3"
           borderRadius="8px"
-          boxShadow="md"
-          p={6}
-          mb={6}
+          position="relative"
         >
-          {/* Phần bên trái */}
-          <Box w="48%" p={4} bg="#eceff1  " borderRadius="8px">
-            <VStack spacing={6} align="stretch">
-              <Heading size="md">Thông tin sản phẩm</Heading>
-              <FormControl>
-                <FormLabel>Tên sản phẩm</FormLabel>
-                <Input placeholder="Tên sản phẩm" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Mô tả sản phẩm</FormLabel>
-                <Input placeholder="Mô tả sản phẩm" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Giá sản phẩm</FormLabel>
-                <Input placeholder="Giá sản phẩm" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Số lượng sản phẩm</FormLabel>
-                <Input placeholder="Số lượng sản phẩm" size="lg" />
-              </FormControl>
-            </VStack>
-          </Box>
+          <Flex justify="space-between" align="center" mb={2}>
+            <Flex align="center">
+              <Icon as={AiOutlineHome} mr={2} />
+              <Text fontSize="20px" fontWeight="700">
+                Địa chỉ nhận hàng
+              </Text>
+            </Flex>
+            <Input
+              placeholder="Nhập địa chỉ nhận hàng"
+              fontWeight="600"
+              h="30px"
+              borderRadius="6px"
+              w="60%"
+              onClick={openAddressForm}
+            />
+          </Flex>
 
-          {/* Phần bên phải */}
-          <Box w="48%" p={4} bg="#eceff1  " borderRadius="8px">
-            <VStack spacing={6} align="stretch">
-              <Heading size="md">Thông tin khách hàng</Heading>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineHome} mr={2} />
-                    Họ và tên
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="Họ và tên" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineMail} mr={2} />
-                    Email
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="Email" type="email" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlinePhone} mr={2} />
-                    Số điện thoại
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="Số điện thoại" type="tel" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineHome} mr={2} />
-                    Địa chỉ giao hàng
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="Địa chỉ giao hàng" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Thành phố</FormLabel>
-                <Input placeholder="Thành phố" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>Quốc gia</FormLabel>
-                <Input placeholder="Quốc gia" size="lg" />
-              </FormControl>
-            </VStack>
-          </Box>
-        </Flex>
+          {isAddressFormVisible && (
+            <Box
+              position="absolute"
+              top="0"
+              right="0"
+              width="450px"
+              bg="white"
+              border="1px solid #d3d3d3"
+              borderRadius="8px"
+              p={4}
+              boxShadow="lg"
+              zIndex="10"
+            >
+              {/* Close button */}
+              <Icon
+                as={AiOutlineClose}
+                position="absolute"
+                top="5px"
+                right="5px"
+                cursor="pointer"
+                onClick={closeAddressForm}
+              />
 
-        <Flex justify="space-between" mb={6}>
-          {/* Thông tin phương thức thanh toán */}
-          <Box w="48%" p={4} bg="#eceff1  " borderRadius="8px">
-            <VStack spacing={6} align="stretch">
-              <Heading size="md">Thông tin phương thức thanh toán</Heading>
-              <FormControl>
-                <FormLabel>Loại phương thức thanh toán</FormLabel>
+              <FormControl mb={2}>
+                <FormLabel>Họ và tên</FormLabel>
+                <Input placeholder="Họ và tên" h="30px" borderRadius="6px" />
+              </FormControl>
+              <FormControl mb={2}>
+                <FormLabel>Địa chỉ cụ thể</FormLabel>
+                <Input
+                  placeholder="Địa chỉ cụ thể"
+                  h="30px"
+                  borderRadius="6px"
+                />
+              </FormControl>
+              <FormControl mb={2}>
+                <FormLabel>Quận/Huyện</FormLabel>
                 <Select
-                  placeholder="Chọn loại phương thức thanh toán"
-                  size="lg"
+                  placeholder="Chọn Quận/Huyện"
+                  h="30px"
+                  borderRadius="6px"
                 >
-                  <option>Thẻ tín dụng</option>
-                  <option>Ví điện tử</option>
-                  <option>Trả tiền mặt khi nhận hàng</option>
+                  <option value="district1">Quận 1</option>
+                  <option value="district2">Quận 2</option>
+                  {/* Thêm các Quận/Huyện khác nếu cần */}
                 </Select>
               </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineCreditCard} mr={2} />
-                    Số thẻ
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="Số thẻ" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineCreditCard} mr={2} />
-                    Thời hạn
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="MM/YY" size="lg" />
-              </FormControl>
-              <FormControl>
-                <FormLabel>
-                  <Flex align="center">
-                    <Icon as={AiOutlineCreditCard} mr={2} />
-                    Mã bảo mật
-                  </Flex>
-                </FormLabel>
-                <Input placeholder="CVC" size="lg" />
-              </FormControl>
-            </VStack>
-          </Box>
-
-          {/* Thông tin vận chuyển */}
-          <Box w="48%" p={4} bg="#eceff1  " borderRadius="8px">
-            <VStack spacing={6} align="stretch">
-              <Heading size="md">Thông tin vận chuyển</Heading>
-              <FormControl>
-                <FormLabel>Phương thức vận chuyển</FormLabel>
-                <Select placeholder="Chọn phương thức vận chuyển" size="lg">
-                  <option>Giao hàng nhanh</option>
-                  <option>Giao hàng tiết kiệm</option>
+              <FormControl mb={2}>
+                <FormLabel>Thành phố</FormLabel>
+                <Select
+                  placeholder="Chọn thành phố"
+                  h="30px"
+                  borderRadius="6px"
+                >
+                  <option value="hanoi">Hà Nội</option>
+                  <option value="hcm">TP. Hồ Chí Minh</option>
+                  {/* Thêm các thành phố khác nếu cần */}
                 </Select>
               </FormControl>
-              <FormControl>
-                <FormLabel>Phí vận chuyển</FormLabel>
-                <Input placeholder="Phí vận chuyển" size="lg" />
+              <FormControl mb={2}>
+                <FormLabel>Số điện thoại</FormLabel>
+                <Input
+                  type="tel"
+                  placeholder="Số điện thoại"
+                  h="30px"
+                  borderRadius="6px"
+                />
               </FormControl>
-              <FormControl>
-                <FormLabel>Thời gian dự kiến giao hàng</FormLabel>
-                <Input placeholder="Thời gian dự kiến giao hàng" size="lg" />
-              </FormControl>
-            </VStack>
-          </Box>
-        </Flex>
+              <Flex justify="flex-end" mt={4}>
+                <Button
+                  colorScheme="teal"
+                  onClick={closeAddressForm}
+                  mr={4}
+                  background="#3182ce"
+                  borderRadius="6px"
+                  color="#fff"
+                  fontWeight="600"
+                  fontSize="15"
+                >
+                  Lưu
+                </Button>
+                <Button
+                  colorScheme="red"
+                  onClick={closeAddressForm}
+                  borderRadius="6px"
+                  fontWeight="600"
+                  fontSize="15"
+                  background="#eceff1"
+                  color="#2b6cb0"
+                >
+                  Cancel
+                </Button>
+              </Flex>
+            </Box>
+          )}
+        </Box>
 
-        <Box bg="#eceff1  " borderRadius="8px" p={4} mb={6}>
-          <Heading size="md">Hình ảnh</Heading>
-          <Flex justify="space-between" align="center">
-            {/* Box cho Momo */}
-            <Flex alignItems="center">
-              <Box
-                w="100px"
-                h="100px"
-                bg="#eceff1  "
-                borderRadius="8px"
-                p={2}
-                mr={4}
-                display="flex"
-                alignItems="center"
-              >
+        {/* Giỏ hàng */}
+        <Box mb={2} p={4} border="1px solid #d3d3d3" borderRadius="8px">
+          <Heading as="h2" size="md" mb={2} fontWeight="600">
+            Giỏ hàng (1 sản phẩm)
+          </Heading>
+          <Flex justify="space-between" align="center" mb={2}>
+            <Flex align="center">
+              <Box w="100px" h="100px" mr={4} borderRadius="8px">
                 <Image
-                  src="https://play-lh.googleusercontent.com/dQbjuW6Jrwzavx7UCwvGzA_sleZe3-Km1KISpMLGVf1Be5N6hN6-tdKxE5RDQvOiGRg"
-                  alt="Momo"
+                  src="https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-blue-thumbnew-600x600.jpg"
+                  alt="Sản phẩm"
                   w="100%"
                   h="100%"
                   borderRadius="8px"
                   objectFit="cover"
                 />
               </Box>
+              <Icon as={AiOutlineDelete} color="red" cursor="pointer" />
             </Flex>
-
-            {/* Box cho Ngân hàng */}
-            <Flex alignItems="center">
-              <Box w="350px" h="140px" bg="#eceff1  " borderRadius="8px" p={2}>
-                <Image
-                  src="https://cafefcdn.com/203337114487263232/2022/5/12/bank-1652317058190381543119.jpg"
-                  alt="Ngân hàng"
-                  w="100%"
-                  h="100%"
-                  borderRadius="8px"
-                  objectFit="cover"
-                />
-              </Box>
-            </Flex>
+            <VStack align="flex-end">
+              <Text fontWeight="550" fontSize="15">
+                Iphone 15 Pro
+              </Text>
+              <Text color="#808080">Màu: Đỏ</Text>
+              <Flex align="center">
+                <Text
+                  color="
+#f00"
+                >
+                  Giá: 500,000 VND
+                </Text>
+                <Text ml={2} textDecoration="line-through">
+                  600,000 VND
+                </Text>
+              </Flex>
+              <Flex>
+                <Button>-</Button>
+                <Text mx={2}>1</Text>
+                <Button>+</Button>
+              </Flex>
+            </VStack>
           </Flex>
         </Box>
 
-        <Flex justify="center" mt={6}>
+        {/* Phương thức thanh toán */}
+        <Box mb={2} p={4} border="1px solid #d3d3d3" borderRadius="8px">
+          <Text fontSize="20px" mb={2} color="#1a202c" fontWeight="700">
+            Chọn phương thức thanh toán
+          </Text>
+          <Flex justify="space-between">
+            <Button leftIcon={<Icon as={AiOutlineCreditCard} />} w="48%">
+              <Text fontSize="14px" color="">
+                Thanh toán khi nhận hàng
+              </Text>
+            </Button>
+            <Button leftIcon={<Icon as={AiOutlineCreditCard} />} w="48%">
+              <Text fontSize="14px">Thanh toán qua ví VNpay</Text>
+            </Button>
+          </Flex>
+        </Box>
+
+        {/* Mã giảm giá */}
+        <Box mb={2} p={4} border="1px solid #d3d3d3" borderRadius="8px">
+          <FormControl mb={2}>
+            <FormLabel>Nhập mã giảm giá</FormLabel>
+            <Flex>
+              <Input
+                placeholder="Mã giảm giá"
+                h="30px"
+                borderRadius="6px"
+                w="70%"
+              />
+              <Button
+                ml={2}
+                colorScheme="teal"
+                fontWeight="400"
+                borderRadius="5"
+                background="#3681f0"
+                borderColor="#3681f0"
+                color="#fff"
+              >
+                Áp dụng
+              </Button>
+            </Flex>
+          </FormControl>
+        </Box>
+
+        {/* Tính toán */}
+        <Box mb={2} p={4} border="1px solid #d3d3d3" borderRadius="8px">
+          <Flex justify="space-between">
+            <Text color="#808080" fontWeight="500" fontSize="12">
+              Tạm tính:
+            </Text>
+            <Text>500,000 VND</Text>
+          </Flex>
+          <Flex justify="space-between">
+            <Text fontWeight="500" color="#808080" fontSize="12">
+              Giảm giá:
+            </Text>
+            <Text
+              fontWeight="500"
+              color="
+#f00"
+            >
+              50,000 VND
+            </Text>
+          </Flex>
+          <Flex justify="space-between" fontWeight="bold">
+            <Text>Tổng tiền:</Text>
+            <Text
+              fontWeight="500"
+              color="
+#f00"
+            >
+              450,000 VND
+            </Text>
+          </Flex>
+        </Box>
+
+        {/* Button hành động */}
+        <Flex justify="space-between" mt={4}>
           <Button
-            textAlign="center"
-            colorScheme="teal"
-            size="lg"
-            fontSize="16px" // Chỉnh kích thước font chữ thành 16px
             fontWeight="600"
-            w="100%"
-            maxW="300px"
-            h="60px"
-            borderRadius="6px"
-            transition="all 0.3s"
-            _hover={{
-              opacity: 0.8,
-              color: "red",
-              bg: "white",
-              border: "1px solid red",
-            }}
+            borderRadius="10px"
+            colorScheme="teal"
+            w="48%"
+            h="40px"
+            background="#ff2323"
+            borderColor="#ff2323"
+            color="#fff"
           >
-            Xác nhận đơn hàng
+            Đặt hàng
+          </Button>
+          <Button
+            w="48%"
+            h="40px"
+            color="#ff2323"
+            borderRadius="10px"
+            borderColor="#ff2323"
+            fontWeight="600"
+          >
+            Chọn sản phẩm khác
           </Button>
         </Flex>
       </Box>
