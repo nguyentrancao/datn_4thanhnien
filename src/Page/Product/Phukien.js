@@ -73,7 +73,7 @@ const Phukiennb = () => {
                 </Box>
             </Flex>
             <Grid
-                ml={12}
+                ml={0}
                 mt={10}
                 w="100%"
                 templateRows="repeat(2, 1fr)"
@@ -87,7 +87,7 @@ const Phukiennb = () => {
                     <GridItem
                         key={index}
                         h="350px"
-                        w="260px"
+                        w="240px"
                         bg="white"
                         borderRadius={8}
                         boxShadow="lg"

@@ -1,7 +1,8 @@
-import { Box, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Text, Flex, Image, Center } from "@chakra-ui/react";
 
 const InfoCard = ({ imageUrl, title, description }) => {
   return (
+   
     <Box
       mr={-15}
       width="326px"
@@ -46,6 +47,7 @@ const InfoCard = ({ imageUrl, title, description }) => {
         {description}
       </Text>
     </Box>
+    
   );
 };
 

@@ -1,57 +1,42 @@
 import React, { useState } from "react";
 import {
   Box,
+  Button,
+  Text,
+  Center,
   Flex,
   Heading,
-  Text,
-  Button,
   Image,
-  IconButton,
-  Divider,
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
 } from "@chakra-ui/react";
-import { FaTrashAlt, FaPlus, FaMinus } from "react-icons/fa";
+import { DeleteIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Product A",
-      price: 19.99, 
+      name: "HP Omen 16 n0085AX R9 6900HX (7C144PA)",
+      price: 47521000,
       quantity: 1,
-      image: "https://via.placeholder.com/150",
+      image:
+        "https://cdn.tgdd.vn/Products/Images/44/302982/hp-omen-16-n0085ax-r9-7c144pa-thumb-fix-600x600.jpg",
     },
     {
       id: 2,
-      name: "Product B",
-      price: 24.99,
+      name: "HP Elitebook Dragonfly G3 i7 1255U (6Z980PA)",
+      price: 34392000,
       quantity: 2,
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 3,
-      name: "Product C",
-      price: 14.99,
-      quantity: 1,
-      image: "https://via.placeholder.com/150",
+      image:
+        "https://cdn.tgdd.vn/Products/Images/44/302984/hp-elitebook-dragonfly-g3-i7-6z980pa-070323-114211-600x600.jpg",
     },
   ]);
 
-  const handleQuantityChange = (itemId, operation) => {
-    // Code for handling quantity change
-  };
-
   const handleRemoveItem = (itemId) => {
-    // Code for removing an item from the cart
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
   };
 
   const calculateTotal = () => {
-    // Code for calculating the total amount
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0
@@ -59,111 +44,79 @@ const Cart = () => {
   };
 
   return (
-    <Box
-      maxWidth="md"
-      p={6}
-      border="1px solid #ccc"
-      borderRadius="md"
-      bg="gray.100"
-      mt="150"
-    >
-      <Heading mb={6} color="gray.800">
-        Your Cart
-      </Heading>
+    <Center>
+      <Box w="80%" bg="gray.100" mt={10} p={4} borderRadius="md">
+        <Heading fontSize="2xl" textAlign="center" mb={4}>
+          Giỏ hàng của bạn
+        </Heading>
 
-      {/* Cart Items */}
-      <Box>
-        <Table variant="striped" colorScheme="gray">
-          <Thead>
-            <Tr>
-              <Th color="gray.800">Product</Th>
-              <Th color="gray.800">Quantity</Th>
-              <Th color="gray.800">Price</Th>
-              <Th color="gray.800">Total</Th>
-              <Th color="gray.800"></Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            {cartItems.map((item) => (
-              <Tr key={item.id} bg="white" _hover={{ bg: "gray.200" }}>
-                <Td>
-                  <Flex align="center" gap={4}>
-                    <Image src={item.image} alt={item.name} boxSize="80px" />
-                    <Box>
-                      <Heading size="md" color="gray.800">
-                        {item.name}
-                      </Heading>
-                      <Text color="gray.500">${item.price.toFixed(2)}</Text>
-                    </Box>
-                  </Flex>
-                </Td>
-                <Td>
-                  <Flex align="center" gap={4}>
-                    <IconButton
-                      aria-label="Decrease quantity"
-                      icon={<FaMinus />}
-                      onClick={() => handleQuantityChange(item.id, "decrement")}
-                      colorScheme="gray"
-                      size="sm"
-                      _hover={{ bg: "gray.300" }}
-                    />
-                    <Text>{item.quantity}</Text>
-                    <IconButton
-                      aria-label="Increase quantity"
-                      icon={<FaPlus />}
-                      onClick={() => handleQuantityChange(item.id, "increment")}
-                      colorScheme="gray"
-                      size="sm"
-                      _hover={{ bg: "gray.300" }}
-                    />
-                  </Flex>
-                </Td>
-                <Td>${item.price.toFixed(2)}</Td>
-                <Td>${(item.price * item.quantity).toFixed(2)}</Td>
-                <Td>
-                  <IconButton
-                    aria-label="Remove from cart"
-                    icon={<FaTrashAlt />}
-                    onClick={() => handleRemoveItem(item.id)}
-                    colorScheme="red"
-                    size="sm"
-                    _hover={{ bg: "red.300" }}
-                  />
-                </Td>
-              </Tr>
-            ))}
-          </Tbody>
-        </Table>
-      </Box>
+        {cartItems.map((item) => (
+          <Flex key={item.id} alignItems="center" mt={4} p={4} bg="white" borderRadius="md" boxShadow="md">
+            <Image src={item.image} alt={item.name} boxSize="160px" objectFit="cover" mr={4} />
 
-      {/* Cart Summary */}
-      <Box mt={6}>
-        <Divider borderColor="gray.400" />
-        <Flex mt={4} direction="column" gap={4}>
-          <Flex justify="space-between">
-            <Text color="gray.600">Subtotal</Text>
-            <Heading size="md" color="gray.800">
-              ${calculateTotal().toFixed(2)}
-            </Heading>
+            <Flex direction="column" flex="1">
+              <Text fontSize="xl" fontWeight="bold" color="blue.500" mb={2}>
+                {item.name}
+              </Text>
+              <Text fontSize="md" color="gray.600" mb={2}>
+                Dịch vụ/Gói bảo hành thiết bị điện tử được áp dụng cho sản phẩm này
+              </Text>
+              <Button
+                leftIcon={<DeleteIcon />}
+                colorScheme="gray"
+                size="sm"
+                onClick={() => handleRemoveItem(item.id)}
+              >
+                Xóa
+              </Button>
+            </Flex>
+
+            <Flex direction="column" alignItems="flex-end">
+              <Text fontSize="xl" color="red.500" fontWeight="bold" mb={2}>
+                {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}
+              </Text>
+              <Text fontSize="md" color="gray.500" textDecoration="line-through">
+                Giá gốc: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price * 1.1)}
+              </Text>
+            </Flex>
           </Flex>
-          <Flex justify="space-between">
-            <Text color="gray.600">Shipping</Text>
-            <Heading size="md" color="gray.800">
-              $5.00
-            </Heading>
-          </Flex>
-          <Flex justify="space-between">
-            <Text color="gray.800">Total</Text>
-            <Heading size="md" color="gray.800">
-              ${(calculateTotal() + 5).toFixed(2)}
-            </Heading>
-          </Flex>
-          <Button colorScheme="blue" size="lg" px={8} py={6}>
-            Proceed to Checkout
+        ))}
+
+        <Flex mt={6} justify="space-between">
+          <Text fontSize="xl" fontWeight="bold">
+            Tạm tính: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(calculateTotal())}
+          </Text>
+        </Flex>
+
+        <Flex mt={6} justify="center" direction="column" alignItems="center">
+          <Link to="/Payment">
+            <Button
+              w="100%"
+              maxW="640px"
+              borderRadius="md"
+              colorScheme="red"
+              color="white"
+              fontSize="lg"
+              fontWeight="bold"
+              mb={4}
+            >
+              Tiến hành đặt hàng
+            </Button>
+          </Link>
+          <Button
+            w="100%"
+            maxW="640px"
+            borderRadius="md"
+            colorScheme="red"
+            variant="outline"
+            fontSize="lg"
+            fontWeight="bold"
+          >
+            Chọn thêm sản phẩm khác
           </Button>
         </Flex>
       </Box>
-    </Box>
+    </Center>
   );
 };
 
