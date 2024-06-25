@@ -10,6 +10,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
 import { px } from "framer-motion";
 
 const ProductDetail = () => {
@@ -750,7 +751,6 @@ const ProductDetail = () => {
       </Flex>
       {/* Related Products */}
       <Box
-
         mt={50}
         sx={{
           "@media screen and (min-width: 100%)": {
@@ -776,7 +776,6 @@ const ProductDetail = () => {
               mt={10}
               w={"auto"}
               h={351}
-
             >
               <Image
                 src={relatedProduct.imgSrc}
@@ -867,12 +866,11 @@ const ProductDetail = () => {
         >
           Đánh giá sản phẩm:
         </Text>
-        <Flex position="absolute" left="30px" top="61.60px" gap="2.99px">
-          <Box w="4" h="4" bg="gray" rounded="full" />
-          <Box w="4" h="4" bg="gray.300" rounded="full" />
-          <Box w="4" h="4" bg="gray.300" rounded="full" />
-          <Box w="4" h="4" bg="gray.300" rounded="full" />
-          <Box w="4" h="4" bg="gray.300" rounded="full" />
+        {/* đánh giá sao sp  */}
+        <Flex position="absolute" left="30px" top="70px" gap="2.99px">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon key={i} color="#ffc107" fontSize="18" lineHeight="24px" />
+          ))}
         </Flex>
         <Box
           w="95%"
@@ -922,12 +920,12 @@ const ProductDetail = () => {
           top="233.77px"
           bg="#4299E1"
           rounded="5px"
-          color="white"
+          color="black"
           fontFamily="Inter"
-          fontSize="base"
-          fontWeight="semibold"
+          fontSize="14"
+          fontWeight="700"
           lineHeight="tight"
-          _hover={{ bg: "white" }}
+          _hover={{ bg: "#dfedfa" }}
         >
           Nhận xét
         </Button>
