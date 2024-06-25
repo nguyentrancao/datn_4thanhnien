@@ -9,6 +9,8 @@ import {
   HStack,
   Grid,
   GridItem,
+  Input,
+  Stack ,
 } from "@chakra-ui/react";
 import { px } from "framer-motion";
 
@@ -94,7 +96,7 @@ const ProductDetail = () => {
                 mr={-20}
                 borderWidth="1px"
                 borderStyle="solid"
-                borderColor="black"
+                borderColor="#E0E0E0"
               />
             ))}
           </HStack>
@@ -264,13 +266,12 @@ const ProductDetail = () => {
           flex="1"
           p={5}
           mt={100}
-          borderRadius="md"
-          borderWidth="1px"
-          borderStyle="solid"
-          borderColor="black"
+          borderRadius="20px"
+        
           boxSizing="border-box"
           overflowWrap="break-word"
           h={650}
+          boxShadow=" 0px 3px 6px 5px  rgba(0, 0, 0, 0.1)" 
         >
           <Heading as="h2" size="lg" mb={4} ml={10} mt={20}>
             {product.name}
@@ -548,7 +549,7 @@ const ProductDetail = () => {
           </Box>
 
           <Box
-            mt={50}
+            mt={70}
             width="655.20px"
             height="218.40px"
             pl="0.63px"
@@ -877,13 +878,7 @@ const ProductDetail = () => {
         <Box
           w="95%"
           h="90px"
-          position="absolute"
-          left="30px"
-          top="109.57px"
-          bg="white"
-          rounded="md"
-          border="1px solid"
-          borderColor="slate.200"
+       
         >
           <Box
             w="full"
@@ -895,20 +890,18 @@ const ProductDetail = () => {
             border="1px solid"
             borderColor="black"
           />
-          <Text
-            w="90%"
-            h="22px"
-            position="absolute"
-            left="17.25px"
-            top="8.86px"
-            color="gray.400"
-            fontSize="14.88px"
-            fontWeight="normal"
-            fontFamily="Inter"
-            lineHeight="tall"
-          >
-            Hãy nhận xét về sản phẩm này
-          </Text>
+
+          <Stack spacing={3}>
+            <Input  placeholder='   Hãy nhận xét về sản phẩm này' size='lg'   w="95%"
+                    h="90px"
+                    position="absolute"
+                    left="30px"
+                    top="109.57px"
+                    bg="white"
+                    rounded="md"
+                    border="1px solid"
+                    borderColor="slate.200"/>
+          </Stack>
         </Box>
         <Button
           w="97px"

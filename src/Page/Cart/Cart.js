@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -7,7 +7,7 @@ import {
   Flex,
   Heading,
   Image,
-  useState,
+  
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
