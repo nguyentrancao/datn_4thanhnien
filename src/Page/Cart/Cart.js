@@ -197,18 +197,20 @@ const Cart = () => {
               Tiến hành đặt hàng
             </Button>
           </Link>
-          <Button
-            w="80%"
-            borderRadius={8}
-            h={50}
-            bgColor={"white"}
-            color={"red"}
-            fontSize={16}
-            as={"b"}
-            border="1px solid #FF0000"
-          >
-            Chọn thêm sản phẩm khác
-          </Button>
+          <Link to="/">
+            <Button
+              w="640px"
+              borderRadius={8}
+              h={50}
+              bgColor={"white"}
+              color={"red"}
+              fontSize={16}
+              as={"b"}
+              border="1px solid #FF0000"
+            >
+              Chọn thêm sản phẩm khác
+            </Button>
+          </Link>
         </Flex>
       </Box>
     </Center>

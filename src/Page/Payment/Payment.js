@@ -15,7 +15,7 @@ import {
   Image,
   useDisclosure,
 } from "@chakra-ui/react";
-
+import { Link } from "react-router-dom";
 import {
   AiOutlineCreditCard,
   AiOutlineHome,
@@ -300,16 +300,18 @@ const Payment = () => {
           >
             Đặt hàng
           </Button>
-          <Button
-            w="48%"
-            h="40px"
-            color="#ff2323"
-            borderRadius="10px"
-            borderColor="#ff2323"
-            fontWeight="600"
-          >
-            Chọn sản phẩm khác
-          </Button>
+          <Link to="/">
+            <Button
+              w="400px"
+              h="40px"
+              color="#ff2323"
+              borderRadius="10px"
+              borderColor="#ff2323"
+              fontWeight="600"
+            >
+              Chọn sản phẩm khác
+            </Button>
+          </Link>
         </Flex>
       </Box>
     </Center>
