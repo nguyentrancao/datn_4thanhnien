@@ -134,16 +134,16 @@ const PhoneProduct = () => {
               justifyContent="center"
               alignItems="center" // căn giữa theo chiều ngang
             >
-              <Link to="/detail" >
+              <Link to="/detail">
                 <Image
-                  src="https://cdn.phuckhangmobile.com/image/iphone-15-mau-xanh-duong-29738j.jpg"
+                  src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-card-40-iphone15prohero-202309?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1693086290312"
                   alt="Product Image"
                   marginBottom="1rem"
                   _hover={{ transform: "translateY(-5px)" }}
                   transition="all 0.3s"
                   borderRadius="md"
-                  width="200px" // Thiết lập chiều rộng là 200px
-                  height="200px" // Thiết lập chiều cao là 200px
+                  width="100%" // Thiết lập chiều rộng là 200px
+                  height="100%" // Thiết lập chiều cao là 200px
                 />
               </Link>
               <Text fontSize="20px" fontWeight="bold" color="#000">
@@ -162,7 +162,7 @@ const PhoneProduct = () => {
               <Text fontSize="14px" color="#ffa500" fontWeight="900">
                 ★★★★☆
               </Text>
-              <Link to="/detail" >
+              <Link to="/detail">
                 <Button
                   borderRadius="6px"
                   colorScheme="red"

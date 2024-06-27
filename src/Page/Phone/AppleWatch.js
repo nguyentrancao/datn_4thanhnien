@@ -142,8 +142,8 @@ const AppleWatchProduct = () => {
                   _hover={{ transform: "translateY(-5px)" }}
                   transition="all 0.3s"
                   borderRadius="md"
-                  width="200px" // Thiết lập chiều rộng là 200px
-                  height="200px" // Thiết lập chiều cao là 200px
+                  width="100%" // Thiết lập chiều rộng là 200px
+                  height="100%" // Thiết lập chiều cao là 200px
                 />
               </Link>
               <Text fontSize="20px" fontWeight="bold" color="#000">
